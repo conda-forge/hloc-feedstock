@@ -1,0 +1,15 @@
+diff --git a/hloc/utils/database.py b/hloc/utils/database.py
+index c8a7aa5c..6be9d51a 100644
+--- a/hloc/utils/database.py
++++ b/hloc/utils/database.py
+@@ -183,8 +183,8 @@ def add_image(
+         self,
+         name,
+         camera_id,
+-        prior_q=np.full(4, np.NaN),
+-        prior_t=np.full(3, np.NaN),
++        prior_q=np.full(4, np.nan),
++        prior_t=np.full(3, np.nan),
+         image_id=None,
+     ):
+         cursor = self.execute(
