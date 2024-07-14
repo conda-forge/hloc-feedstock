@@ -8,10 +8,12 @@ package:
 source:
   url: https://github.com/cvg/Hierarchical-Localization/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 78bc0d0377f5f0bc949ac1811ff6f2c102a25e858d02de6cdcbed808f4c3ce33
+  patches:
+    - 405.patch
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
