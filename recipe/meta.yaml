@@ -13,15 +13,15 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pytorch
     - torchvision
     - numpy
@@ -37,6 +37,8 @@ requirements:
     - lightglue
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - hloc
 
